@@ -20,8 +20,9 @@
 </p>
 
 <p align="center">
-  <a href="#overview">Overview</a> &bull;
-  <a href="#compatibility">Compatibility</a> &bull;
+  <a href="#what-it-does">What it does</a> &bull;
+  <a href="#how-to-use">How to use</a> &bull;
+  <a href="#commands-and-permissions">Commands</a> &bull;
   <a href="#install">Install</a> &bull;
   <a href="https://github.com/TheNINJALLO/endstone-op-permissions/releases">Releases</a>
 </p>
@@ -30,9 +31,23 @@
 
 Provides permissions for structure blocks and command blocks without requiring OP status. This release is aligned with Endstone 0.11.8 and Minecraft Bedrock Dedicated Server 1.26.40, and is distributed as a Python wheel for direct installation in an Endstone server.
 
-## Capabilities
+## What it does
 
--
+- Allows trusted non-operators to use structure blocks or command blocks through separate permissions.
+- Cancels protected interactions unless the player is an operator or holds the matching permission.
+- Reloads the generated permission configuration without a full server restart.
+
+## How to use
+
+1. Grant `op.permissions.structure_block` and/or `op.permissions.command_block` through your Endstone permission manager.
+2. Have the non-operator test only the block type they were assigned.
+3. Run `/opreload` after editing the plugin's local permission configuration and revoke permissions when no longer needed.
+
+## Commands and permissions
+
+| Command / usage | What it does | Access |
+|---|---|---|
+| `/opreload` | Reload the OP Permissions configuration | `op.permissions.reload` |
 
 ## Compatibility
 
