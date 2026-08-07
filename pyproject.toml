@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "endstone-op-permissions"
+version = "1.0.11"
+authors = [
+    {name = "TheN1NJ4LL0"}
+]
+description = "Provides permissions for structure blocks and command blocks without requiring OP status"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "endstone>=0.11.8,<0.12"
+]
+
+[project.entry-points."endstone"]
+op_permissions = "endstone_op_permissions.op_permissions:OpPermissionsPlugin"
