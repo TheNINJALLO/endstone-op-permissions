@@ -20,7 +20,7 @@ class OpPermissionsPlugin(Plugin):
     # Plugin metadata
     api_version = "0.11"
     name = "op_permissions"
-    version = "1.0.0"
+    version = "1.0.12"
     description = "Provides permissions for structure blocks and command blocks without requiring OP status"
     
     # Define commands
